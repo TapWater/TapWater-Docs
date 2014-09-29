@@ -50,8 +50,9 @@ For the purposes of this class we plan on hosting the server for free on Heroku.
 
 #### Mobile Applications
 
-![Prototype Screenshot - Home Screen](https://raw.githubusercontent.com/TapWater/TapWater-Docs/master/Screenshots/prototype01.png)
-![Prototype Screenshot - Drink History](https://raw.githubusercontent.com/TapWater/TapWater-Docs/master/Screenshots/prototype02.png)
+<img src="https://raw.githubusercontent.com/TapWater/TapWater-Docs/master/Screenshots/prototype01.png" align="left" width="250px">
+<img src="https://raw.githubusercontent.com/TapWater/TapWater-Docs/master/Screenshots/prototype02.png" align="left" width="250px">
+
 
 TapWater will feature an iOS and Android application.
 The applications will be as similar in form and function as their platforms will allow.
