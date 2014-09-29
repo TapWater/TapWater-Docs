@@ -1,4 +1,4 @@
-# CSC 4501 Meeting 1
+# CSC 4330 Meeting 1
 
 28 September 2014 at CC's Coffee House on Burbank
 
@@ -85,7 +85,7 @@ The iOS application will be built in Swift with the iOS SDK. The Android applica
 ## 4. Github
 
 We have created a Github organization to use throughout the duration of the project.
-It can be found at [https://github.com/TapWater/](https://github.com/TapWater/)
+It can be found at [https://github.com/TapWater/](https://github.com/TapWater/).
 
 We created 4 repositories for the project.
 
