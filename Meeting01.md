@@ -106,3 +106,4 @@ At the next meeting we plan on doing the following:
 
 - Catch up on how development is going and make sure everyone is on track
 - Use the task breakdowns that Jonathan and Cody produced to create a project-wide task list and Critical Path Diagram/Gantt Chart
+- Create System Requirements Specification document
