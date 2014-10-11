@@ -109,27 +109,89 @@ Each requirement should be uniquely identified with a sequence number or a meani
 
 ### Performance Requirements
 
-If there are performance requirements for the product under various circumstances, state them here and explain their rationale, to help the developers understand the intent and make suitable design choices. Specify the timing relationships for real time systems. Make such requirements as specific as possible. You may need to state performance requirements for individual functional requirements or features.
+Performance issues are not expected form TapWater.
+Simplicity is a fundamental element of the design.
+
+Performance will vary depending upon device and system version.
+
+Changing between screens and processing button presses will be handled by the built in features of the SDK for the given mobile device and should perform at device expectations.
+
+Sycnhronization time may vary depending on network connectivity.
+The data exchanged should be optimized to assure the fastest synchronization possible.
+A local cache of drinks will be kept by the system so that it does not have to load data from the server repeatedly.
 
 ### Safety Requirements
 
-Specify those requirements that are concerned with possible loss, damage, or harm that could result from the use of the product. Define any safeguards or actions that must be taken, as well as actions that must be prevented. Refer to any external policies or regulations that state safety issues that affect the product’s design or use. Define any safety certifications that must be satisfied.
+Use of the system should not present any harm to the user's device.
+
+TapWater should not be used while operating a motor vehicle or any other kind of dangerous machinery.
+
+Users should not use TapWater to consume more than a healthy amount of water.
+What is considered a "healthy" amount of water varies from person to person. 
+If a user is uncertain they should seek the advice of a doctor.
+
+Users should not use TapWater if they have a condition in which water consumption may damage their health.
 
 ### Security Requirements
+
+The drink data is not sensetive information.
+It is still private user information and should be secured using standard database security protocols.
+
+The system communicates usernames, passwords, and device information over the network.
+This communication should be encrytpted with an HTTPS connection.
+Additionally, the database should not store plain text user passwords.
 
 Specify any requirements regarding security or privacy issues surrounding use of the product or protection of the data used or created by the product. Define any user identity authentication requirements. Refer to any external policies or regulations containing security issues that affect the product. Define any security or privacy certifications that must be satisfied.
 
 ### Software Quality Attributes
 
-Specify any additional quality characteristics for the product that will be important to either the customers or the developers. Some to consider are: adaptability, availability, correctness, flexibility, interoperability, maintainability, portability, reliability, reusability, robustness, testability, and usability. Write these to be specific, quantitative, and verifiable when possible. At the least, clarify the relative preferences for various attributes, such as ease of use over ease of learning.
+The user interfaces should be appealing to the eye.
+The system should follow a consistent design style with a consistent color scheme.
 
-### Business Rules
+The mobile applications should be available on their respective software marketplaces.
+The iOS app should be available on the Apple App store.
+The Android app should be available on the Google Play store.
 
-List any operating principles about the product, such as which individuals or roles can perform which functions under specific circumstances. These are not functional requirements in themselves, but they may imply certain functional requirements to enforce the rules.
+The data synchronized to each of a user's devices should be consistent with the data on the other devices.
 
 ## Other Requirements
 
-Define any other requirements not covered elsewhere in the SRS. This might include database requirements, internationalization requirements, legal requirements, reuse objectives for the project, and so on. Add any new sections that are pertinent to the project.
+The database on the iOS and Android apps will be a SQLite databse.
+The schema will look like the following:
+
+#### Drinks
+
+| Field Name | Description                                                           |
+|------------|-----------------------------------------------------------------------|
+| uuid       | A unique identifier for the drink.                                    |
+| category   | The type of drink. Possible values are "drink", "glass", and "bottle" |
+| drink_date | The date/time the drink was logged                                    |
+
+The database on the Server will have the following schema:
+
+#### Users
+
+| Field Name      | Description                                        |
+|-----------------|----------------------------------------------------|
+| username        | The user's username                                |
+| password_digest | The password hash and salt for the user's password |
+
+#### Devices
+
+| Field Name   | Description                                              |
+|--------------|----------------------------------------------------------|
+| device_token | The token this device will use to authenticate API calls |
+| device_type  | The type and system version of the device                |
+| user_id      | Foreign key for the user associated with the device      |
+
+#### Drinks
+
+| Field Name | Description                                                           |
+|------------|-----------------------------------------------------------------------|
+| uuid       | A unique identifier for the drink.                                    |
+| category   | The type of drink. Possible values are "drink", "glass", and "bottle" |
+| drink_date | The date/time the drink was logged                                    |
+| user_id    | Foreign key for the user associated with the drink                    |
 
 ## Appendix A: Glossary
 
