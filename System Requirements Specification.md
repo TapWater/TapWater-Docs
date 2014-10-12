@@ -165,6 +165,12 @@ Users will have a list of all their previously recorded drinks. This list will c
 4. If the account creation is successful the server will send the device a device token which it will use to identify itself and the user in future requests.
 5. The registered user will be logged in as the current user for the mobile application.
 
+###### 4.4.3.1	Functional Requirements
+
+- REQ 4.1: The system should provide a registration button if there is no user is logged in.
+- REQ 4.2: The system provides fields for the user to enter a username, password, and confirm their password.
+- REQ 4.3: The system will provide a submit button to create a user and log them in.
+
 ##### Log In
 
 1. From the main screen, the unathenticated user will tap a button to navigate to the user settings screen.
@@ -174,13 +180,21 @@ Users will have a list of all their previously recorded drinks. This list will c
 5. The device token will be saved to be used in future requests.
 6. The registered user will be logged in as the current user for the mobile application.
 
+###### 4.4.3.2	Functional Requirements
+
+- REQ 4.1: The system should provide a log in button to authenticate a previously created user.
+- REQ 4.2: The system should return a 300 code if the log in isn't valid, and return a device token if the log in is valid.
+
 ##### Log Out
 
 1. From the main screen, the athenticated user will tap a button to navigate to the user settings screen.
 2. The user will press a log out button and the device token will be deleted and the user will be logged out of the mobile application.
 
-#### 4.4.3	Functional Requirements
+###### 4.4.3.3	Functional Requirements
 
+- REQ 4.1: The system should provide a log out button if the user is already logged in.
+- REQ 4.2: On press, the system should delete the saved device token.
+- REQ 4.3: The system should redirect the user to the login screen.
 
 ### Synchronization
 
@@ -198,7 +212,8 @@ Users will be able to pull down on the history screen, which will synchronize th
 
 #### 4.5.3	Functional Requirements
 
-
+- REQ 5.1: The system should provide the functionality to pull down on the screen from the drink history screen and trigger synchronization.
+- REQ 5.2: The system should send a POST request to the server containing all the drinks in the device's local database and receive from the server a list of the current drinks between devices for the user.
 
 ## Other Nonfunctional Requirements
 
