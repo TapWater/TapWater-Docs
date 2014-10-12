@@ -96,8 +96,9 @@ Users will record their consumption of water throughout the day manually by choo
 #### 4.1.2	Stimulus/Response Sequences
 
 1. From the main screen, the three TapWater water consumption sizes are presented and selectable.
-2. The user will select one of these when they have drank a matching amount of water.
-3. This will increment the total amount of water drank in the day by the selected amount, as well as record the selection in the user's drink history.
+2. The user will select one of the option when they have drank a matching amount of water.
+3. The total amount of water consumed in that day will increment on the screen
+4. A new drink with be added to the device's database
 
 #### 4.1.3	Functional Requirements
 
