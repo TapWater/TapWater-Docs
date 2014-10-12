@@ -127,7 +127,7 @@ Users will be able to schedule the frequency in which they are reminded by the s
 #### 4.3.1	Description and Priority
 
 The system will allow for both manual, unassisted drink entry as well as remind the users that it is time for them to consume another drink of a certain size in order to meet their self-defined goal. 
-This goal is user defined and the user will specify how often (or how many times per 24 hour period) they would like to be reminded to drink. The priority of this feature is medium-high.
+This goal is user defined and the user will specify how often (or how many times per 24 hour period) they would like to be reminded to drink. The priority of this feature is medium.
 
 #### 4.3.2	Stimulus/Response Sequences
 
@@ -145,7 +145,7 @@ Users will register a unique account using their email address and a user-define
 
 #### 4.4.1	Description and Priority
 
-Users will have a list of all their previously recorded drinks. This list will contain the size of the drink logged as well as the time it was logged. This feature is a high priority.
+Users will have a list of all their previously recorded drinks. This list will contain the size of the drink logged as well as the time it was logged. This feature is a medium priority.
 
 #### 4.4.2	Stimulus/Response Sequences
 
@@ -158,20 +158,21 @@ Users will have a list of all their previously recorded drinks. This list will c
 
 ### Synchronization
 
+Users will sync their data with the system's server in order to be up-to-date between devices.
+
 #### 4.5.1	Description and Priority
 
-Users will have a list of all their previously recorded drinks. This list will contain the size of the drink logged as well as the time it was logged. This feature is a high priority.
+Users will be able to pull down on the history screen, which will synchronize their drink history with the history recorded for the user on the server. This feature is of low importance.
 
 #### 4.5.2	Stimulus/Response Sequences
 
-The user is presumed to be registered and logged in, and have logged at least one drink. The user will select an icon on the main screen which will lead them to their drink history. Here they will see a list 
-of all the previous drinks they have recorded as well as information regarding the size of the drink and time it was recorded.
+1. User will view their drink history.
+2. User will pull down on the screen in order to trigger the synchronization feature.
+3. The system will post the drinks in the history to the server, and the server will respond with the current history between devices for that user.
 
 #### 4.5.3	Functional Requirements
 
 - TBD:
-
-
 
 
 
