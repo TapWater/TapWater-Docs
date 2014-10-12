@@ -236,8 +236,8 @@ Users will have a list of all their previously recorded drinks. This list will c
 
 ###### 4.4.3.2	Functional Requirements
 
-- REQ 4.1: The system should provide a log in button to authenticate a previously created user.
-- REQ 4.2: The system should return a 300 code if the log in isn't valid, and return a device token if the log in is valid.
+- REQ 4.4: The system should provide a log in button to authenticate a previously created user.
+- REQ 4.5: The system should return a 300 code if the log in isn't valid, and return a device token if the log in is valid.
 
 ##### Log Out
 
@@ -246,9 +246,9 @@ Users will have a list of all their previously recorded drinks. This list will c
 
 ###### 4.4.3.3	Functional Requirements
 
-- REQ 4.1: The system should provide a log out button if the user is already logged in.
-- REQ 4.2: On press, the system should delete the saved device token.
-- REQ 4.3: The system should redirect the user to the login screen.
+- REQ 4.6: The system should provide a log out button if the user is already logged in.
+- REQ 4.7: On press, the system should delete the saved device token.
+- REQ 4.8: The system should redirect the user to the login screen.
 
 ### Synchronization
 
