@@ -132,9 +132,11 @@ This goal is user defined and the user will specify how often (or how many times
 
 #### 4.3.2	Stimulus/Response Sequences
 
-1. User will manually be able to edit from the main screen.
-2. User will enter they goal number of ounces to drink per 24 hour period, and then specify how many times daily they'd like to receive a notification.
-3. The system will calculate as the day goes on how many ounces to remind the user to drink based on what the user has already logged. Based on the time, notifications will fire accordingly throughout the day containing the number calculated by the system.
+1. The user will tap a button to take them to a notification settings screen.
+2. The user will enter a goal for the amount of water they wish to drink in a day.
+3. The user will use a date picker to pick a start and end time to specify the period in which they would like to be reminded to drink.
+4. The user will toggle notifications on/off.
+5. The application will notify the user to drink an 8 ounce cup of water at even intervals throughout the day until they've met their goal.
 
 #### 4.3.3	Functional Requirements
 
@@ -150,8 +152,27 @@ Users will have a list of all their previously recorded drinks. This list will c
 
 #### 4.4.2	Stimulus/Response Sequences
 
-1. The user will select an icon on the main screen which will lead them to their drink history.
-2. User will see a list of all the previous drinks they have recorded as well as information regarding the size of the drink and time it was recorded.
+##### Registration
+
+1. From the main screen, the unathenticated user will tap a button to navigate to the user settings screen.
+2. The user will enter a username, password, and password confirmation
+3. If the password and the password confirmation match, the application will try to register the user with the rails server. If there is an error the registration form will reset and an error message will be displayed.
+4. If the account creation is successful the server will send the device a device token which it will use to identify itself and the user in future requests.
+5. The registered user will be logged in as the current user for the mobile application.
+
+##### Log In
+
+1. From the main screen, the unathenticated user will tap a button to navigate to the user settings screen.
+2. The user will enter a username and password.
+3. The application will send the username and password to the server.
+4. If the authentication information is valid, the server will respond with a device token. Otherwise, it will respond with an error and the mobile application will reset the log in form and display an error message.
+5. The device token will be saved to be used in future requests.
+6. The registered user will be logged in as the current user for the mobile application.
+
+##### Log Out
+
+1. From the main screen, the athenticated user will tap a button to navigate to the user settings screen.
+2. The user will press a log out button and the device token will be deleted and the user will be logged out of the mobile application.
 
 #### 4.4.3	Functional Requirements
 
