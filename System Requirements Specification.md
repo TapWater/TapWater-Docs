@@ -32,31 +32,85 @@ List any other documents or Web addresses to which this SRS refers. These may in
 
 ### Product Perspective
 
-Describe the context and origin of the product being specified in this SRS. For example, state whether this product is a follow-on member of a product family, a replacement for certain existing systems, or a new, self-contained product. If the SRS defines a component of a larger system, relate the requirements of the larger system to the functionality of this software and identify interfaces between the two. A simple diagram that shows the major components of the overall system, subsystem interconnections, and external interfaces can be helpful.
+  The TapWater development project works towards creating a new, self-contained software product, namely in the form of a joint-OS (Android and iOS) mobile app. Thus, the primary focus is development of these two co-existing applications. There will also exist a server-side component of development to facilitate synchronization across multiple platforms and devices. In this way, the project requires and will make use of server- and client-side technologies.
 
 ### Product Functions
 
-Summarize the major functions the product must perform or must let the user perform. Details will be provided in Section 3, so only a high level summary (such as a bullet list) is needed here. Organize the functions to make them understandable to any reader of the SRS. A picture of the major groups of related requirements and how they relate, such as a top level data flow diagram or object class diagram, is often effective.
+  The following is a (non-exhaustive) list of core features, along with a brief description without diving into great detail of the technology supporting them. All features listed are categorized as “core” or “main” features, meaning they are either essential to the applications operation or promised functionality which created the demand for such a product.
+
+#### Features:
+  1. Unique User Registration and Setup
+    - Encompasses a “first-time only” account setup to register the user as a unique Client.
+    - Subsequent logins (including those on additional devices) require only a typical email/password submission.
+    - Setup provides the User the opportunity to customize a few additional settings, including toggling notifications for the device (critical).
+  2. Adding Drinks
+    - From a simple menu, the User is able to add drinks from a list of pre-configured amounts (typical amounts, such as 4, 8, and 16fl oz.)
+  3. Tracking Drinks
+    - A simple view of “drink history” throughout the day, including the times they were logged into the application.
+    - It is also possible to view previous days to compare progress.
+  4. Drink Notifications
+    - From a tracking algorithm, we can push notifications to the User’s device(s) to remind them to drink.
 
 ### User Classes and Characteristics
 
-Identify the various user classes that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset of product functions used, technical expertise, security or privilege levels, educational level, or experience. Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain user classes. Distinguish the most important user classes for this product from those who are less important to satisfy.
+As a fairly simple, straight-forward application, the User Classes are somewhat trivial to lay out in detail. The TapWater application is intended to offer ease-of-use in an intuitive and unobtrusive interface. Part of this intention is fulfilled by refraining from adding “embellishment” features and menus that are rather unnecessary to fulfil the intended use. Moreover, as a cross-platform application, these interfaces should mirror each other as much as possible. For the purposes of User Classes, we will define the following:
+  
+__Simple User__ – A User who utilizes TapWater on only a singular device
+__Complex User__ – A User who utilizes TapWater across multiple devices and, possibly, multiple platforms.
+
+#### Simple User
+
+##### Critical Functions:
+
+- Log water intake
+- Track progress towards daily goals
+
+##### Requirements:
+    
+- Methods for logging water intake, including fixed and customized amounts
+- Simplistic history-view of intake for each day
+- A visible daily progress bar for added clarity
+    
+#### Complex User
+  
+##### Critical Functions:
+    
+- All functions identified in the first User Class
+- Synchronization functions to update progress and drink-history on all client devices
+ 
+##### Requirements:
+    
+- Synchronization method for pushing new data to server
+- Synchronization method for pulling updated data from server
+
+The TapWater development team recognizes that both User Classes are critical to the success of the project. Therefore, all identified requirements are classified as “critical”, in that they must function, and function reliably, to minimize frustration and promote user-base growth.
 
 ### Operating Environment
 
-Describe the environment in which the software will operate, including the hardware platform, operating system and versions, and any other software components or applications with which it must peacefully coexist.
+As the core functionality of the TapWater development project is focused within the mobile applications, the intended operating environments are the Android and iOS mobile operating systems. Due to the intentional simplicity of the interface and functionality, the system is highly unlikely to overload the hardware of any popular mobile device.
+Server-side functionality will be implemented through Heroku, eliminating the need for development and maintenance of complex server technologies.
 
 ### Design and Implementation Constraints
 
-Describe any items or issues that will limit the options available to the developers. These might include: corporate or regulatory policies; hardware limitations (timing requirements, memory requirements); interfaces to other applications; specific technologies, tools, and databases to be used; parallel operations; language requirements; communications protocols; security considerations; design conventions or programming standards (for example, if the customer’s organization will be responsible for maintaining the delivered software).
+From a design standpoint, it will be important to remember the functional limitations of mobile devices. By keeping the interface minimalistic, screen size and resolution are less of a concern. However, menu hierarchy will need to be carefully managed to avoid a frustrating user-experience in navigating the application. The action of “logging” a water intake should not be a hardware intensive action, either. The primary concern, then, lies with synchronization of data to the server, which can (potentially) be somewhat more processor-intensive as well as more overall complex.
 
 ### User Documentation
 
-List the user documentation components (such as user manuals, on-line help, and tutorials) that will be delivered along with the software. Identify any known user documentation delivery formats or standards.
+Again, we are at an advantage here due to the simplistic nature of the application’s function and design. Because we fully intend there to be very little learning curve to use this application (which is, for the most part, a critical requirement of all mobile apps) there is also little need for complex documentation. 
+A very brief tutorial will be provided in the app-store descriptions to clarify any ambiguous features or menu options. An in-app help menu will also identify the function of all screen elements on each page.
 
 ### Assumptions and Dependencies
 
-List any assumed factors (as opposed to known facts) that could affect the requirements stated in the SRS. These could include third-party or commercial components that you plan to use, issues around the development or operating environment, or constraints. The project could be affected if these assumptions are incorrect, are not shared, or change. Also identify any dependencies the project has on external factors, such as software components that you intend to reuse from another project, unless they are already documented elsewhere (for example, in the vision and scope document or the project plan).
+##### Hardware Dependencies
+  
+Again, all server functionality will be implemented through Heroku, reducing complexity of the implementation. However, this also increases external dependency for the project, because the application will only be able to sync when the server functions properly.
+Client-side, the application will be dependent upon the mobile device's mobile/wifi antennas to accomplish synchronization tasks. The mobile applications will also be dependent on other integral technologies, such as the touch-screen hardware.
+
+##### Software Dependencies
+  
+With the Android operating system evolving so rapidly over the past several years, we must be sure to develop only using functions available several iterations previous to the current OS version. Many mobile phone users do not update their devices in a timely manner.
+With Android, we will also be implementing functions from the native Android push notification library.
+With the iOS operating system, this is less of a problem, but we must still be sure to develop several versions back to support older devices which cannot update to the latest iOS platform.
 
 ## External Interface Requirements
 
