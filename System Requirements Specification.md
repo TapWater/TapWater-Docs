@@ -41,7 +41,7 @@ List any other documents or Web addresses to which this SRS refers. These may in
 #### Features:
   1. Unique User Registration and Setup
     - Encompasses a “first-time only” account setup to register the user as a unique Client.
-    - Subsequent logins (including those on additional devices) require only a typical email/password submission.
+    - Subsequent logins (including those on additional devices) require only a typical username/password submission.
     - Setup provides the User the opportunity to customize a few additional settings, including toggling notifications for the device (critical).
   2. Adding Drinks
     - From a simple menu, the User is able to add drinks from a list of pre-configured amounts (typical amounts, such as 4, 8, and 16fl oz.)
@@ -131,9 +131,6 @@ Describe the connections between this product and other specific software compon
 Describe the requirements associated with any communications functions required by this product, including e-mail, web browser, network server communications protocols, electronic forms, and so on. Define any pertinent message formatting. Identify any communication standards that will be used, such as FTP or HTTP. Specify any communication security or encryption issues, data transfer rates, and synchronization mechanisms.
 
 
-
-
-
 ## System Features
 
 This template illustrates organizing the functional requirements for the product by system features, the major services provided by the product. You may prefer to organize this section by use case, mode of operation, user class, object class, functional hierarchy, or combinations of these, whatever makes the most logical sense for your product.
@@ -203,7 +200,7 @@ This goal is user defined and the user will specify how often (or how many times
 
 ### User Registration/Login/Log Out
 
-Users will register a unique account using their email address and a user-defined password, and log in and out of this account as they wish.
+Users will register a unique account using their user-defined username and password, and log in and out of this account as they wish.
 
 #### 4.4.1	Description and Priority
 
