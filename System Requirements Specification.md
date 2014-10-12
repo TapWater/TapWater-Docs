@@ -101,7 +101,9 @@ Users will record their consumption of water throughout the day manually by choo
 
 #### 4.1.3	Functional Requirements
 
-- TBD:
+- REQ 1: The system should provide 3 different options for recording drinks.
+- REQ 2: The system should create a drink object with an unique UUID for the created drink, the category of the drink selected, and the current date as the drink_date.
+- REQ 3: The system should save the created drink into the device's database and be ready to accept another drink before the selection's button animation completes.
 
 ### View Drink History
 
@@ -118,7 +120,8 @@ Users will have a list of all their previously recorded drinks. This list will c
 
 #### 4.2.3	Functional Requirements
 
-- TBD:
+- REQ 1: The system should provide a button which will open a screen to view the user's logged drinks.
+- REQ 2: The system should list each drink the user has logged, with each entry displaying the category of the drink and the date the drink was logged.
 
 ### Schedule Drink Notifications
 
@@ -137,7 +140,9 @@ This goal is user defined and the user will specify how often (or how many times
 
 #### 4.3.3	Functional Requirements
 
-- TBD:
+- REQ 1: The system should provide a "settings" icon which provides access to the notification scheduler.
+- REQ 2: The notification scheduler should provide fields to edit the number of ounces the user wishes to drink daily, as well as how often the system will notify them.
+- REQ 3: The system will push notifications to the user's device when the specified time periods are met including the number of remaining ounces to drink as calculated by the system.
 
 ### User Registration/Login/Log Out
 
@@ -154,7 +159,6 @@ Users will have a list of all their previously recorded drinks. This list will c
 
 #### 4.4.3	Functional Requirements
 
-- TBD:
 
 ### Synchronization
 
