@@ -76,34 +76,102 @@ Describe the connections between this product and other specific software compon
 
 Describe the requirements associated with any communications functions required by this product, including e-mail, web browser, network server communications protocols, electronic forms, and so on. Define any pertinent message formatting. Identify any communication standards that will be used, such as FTP or HTTP. Specify any communication security or encryption issues, data transfer rates, and synchronization mechanisms.
 
+
+
+
+
 ## System Features
 
 This template illustrates organizing the functional requirements for the product by system features, the major services provided by the product. You may prefer to organize this section by use case, mode of operation, user class, object class, functional hierarchy, or combinations of these, whatever makes the most logical sense for your product.
 
-### System Feature 1
+### Log Drinks
 
-Don’t really say “System Feature 1.” State the feature name in just a few words.
+Users will record the drinks they consume throughout the day.
 
 #### 4.1.1	Description and Priority
 
-Provide a short description of the feature and indicate whether it is of High, Medium, or Low priority. You could also include specific priority component ratings, such as benefit, penalty, cost, and risk (each rated on a relative scale from a low of 1 to a high of 9).
+Users will record their consumption of water throughout the day manually by choosing from three different categories: a "drink", a "glass", or a "bottle". A drink constitutes 4 oz of water, a glass constitutes 
+8 oz of water, and a bottle constitutes 16 oz of water. This features is critical to the overal usability of the application, so it is of high priority.
 
 #### 4.1.2	Stimulus/Response Sequences
 
-List the sequences of user actions and system responses that stimulate the behavior defined for this feature. These will correspond to the dialog elements associated with use cases.
+The user is presumed to be registered and logged in to the application. From the main screen, the three TapWater water consumption sizes are presented and selectable. The user will select one of these when they
+have drank a matching amount of water. This will increment the total amount of water drank in the day by the selected amount, as well as record the selection in the user's drink history.
 
 #### 4.1.3	Functional Requirements
 
-Itemize the detailed functional requirements associated with this feature. These are the software capabilities that must be present in order for the user to carry out the services provided by the feature, or to execute the use case. Include how the product should respond to anticipated error conditions or invalid inputs. Requirements should be concise, complete, unambiguous, verifiable, and necessary. Use “TBD” as a placeholder to indicate when necessary information is not yet available.
+- TBD:
 
-Each requirement should be uniquely identified with a sequence number or a meaningful tag of some kind.
+### View Drink History
 
-- REQ-1:	
-- REQ-2:	
+Users will view the drinks they have recorded.
 
-### System Feature 2 (and so on)
+#### 4.2.1	Description and Priority
 
-...
+Users will have a list of all their previously recorded drinks. This list will contain the size of the drink logged as well as the time it was logged. This feature is a high priority.
+
+#### 4.2.2	Stimulus/Response Sequences
+
+The user is presumed to be registered and logged in, and have logged at least one drink. The user will select an icon on the main screen which will lead them to their drink history. Here they will see a list 
+of all the previous drinks they have recorded as well as information regarding the size of the drink and time it was recorded.
+
+#### 4.2.3	Functional Requirements
+
+- TBD:
+
+### Schedule Drink Notifications
+
+Users will be able to schedule the frequency in which they are reminded by the application to drink water.
+
+#### 4.3.1	Description and Priority
+
+The application will allow for both manual, unassisted drink entry as well as remind the users that it is time for them to consume another drink of a certain size in order to meet their self-defined goal. 
+This goal is user defined and the user will specify how often (or how many times per 24 hour period) they would like to be reminded to drink. The priority of this feature is medium-high.
+
+#### 4.3.2	Stimulus/Response Sequences
+
+The user is presumed to be registered and logged in. The user will be either prompted to specify their schedule and goals on first login after registration, or will manually be able to edit from the main screen.
+The user will enter they goal number of ounces to drink per 24 hour period, and then specify how many times daily they'd like to receive a notification. The application will calculate as the day goes on how many ounces to remind the user to drink based on what the user has already logged. Based on the time, notifications will fire accordingly throughout the day containing the number calculated by the application.
+
+#### 4.3.3	Functional Requirements
+
+- TBD:
+
+### User Registration/Login/Log Out
+
+
+
+#### 4.4.1	Description and Priority
+
+Users will have a list of all their previously recorded drinks. This list will contain the size of the drink logged as well as the time it was logged. This feature is a high priority.
+
+#### 4.4.2	Stimulus/Response Sequences
+
+The user is presumed to be registered and logged in, and have logged at least one drink. The user will select an icon on the main screen which will lead them to their drink history. Here they will see a list 
+of all the previous drinks they have recorded as well as information regarding the size of the drink and time it was recorded.
+
+#### 4.4.3	Functional Requirements
+
+- TBD:
+
+### Synchronization
+
+#### 4.5.1	Description and Priority
+
+Users will have a list of all their previously recorded drinks. This list will contain the size of the drink logged as well as the time it was logged. This feature is a high priority.
+
+#### 4.5.2	Stimulus/Response Sequences
+
+The user is presumed to be registered and logged in, and have logged at least one drink. The user will select an icon on the main screen which will lead them to their drink history. Here they will see a list 
+of all the previous drinks they have recorded as well as information regarding the size of the drink and time it was recorded.
+
+#### 4.5.3	Functional Requirements
+
+- TBD:
+
+
+
+
 
 ## Other Nonfunctional Requirements
 
