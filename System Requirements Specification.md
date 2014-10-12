@@ -91,12 +91,13 @@ Users will record the drinks they consume throughout the day.
 #### 4.1.1	Description and Priority
 
 Users will record their consumption of water throughout the day manually by choosing from three different categories: a "drink", a "glass", or a "bottle". A drink constitutes 4 oz of water, a glass constitutes 
-8 oz of water, and a bottle constitutes 16 oz of water. This features is critical to the overal usability of the application, so it is of high priority.
+8 oz of water, and a bottle constitutes 16 oz of water. This features is critical to the overal usability of the system, so it is of high priority.
 
 #### 4.1.2	Stimulus/Response Sequences
 
-The user is presumed to be registered and logged in to the application. From the main screen, the three TapWater water consumption sizes are presented and selectable. The user will select one of these when they
-have drank a matching amount of water. This will increment the total amount of water drank in the day by the selected amount, as well as record the selection in the user's drink history.
+1. From the main screen, the three TapWater water consumption sizes are presented and selectable.
+2. The user will select one of these when they have drank a matching amount of water.
+3. This will increment the total amount of water drank in the day by the selected amount, as well as record the selection in the user's drink history.
 
 #### 4.1.3	Functional Requirements
 
@@ -112,8 +113,8 @@ Users will have a list of all their previously recorded drinks. This list will c
 
 #### 4.2.2	Stimulus/Response Sequences
 
-The user is presumed to be registered and logged in, and have logged at least one drink. The user will select an icon on the main screen which will lead them to their drink history. Here they will see a list 
-of all the previous drinks they have recorded as well as information regarding the size of the drink and time it was recorded.
+1. The user will select an icon on the main screen which will lead them to their drink history.
+2. Users will see a list of all the previous drinks they have recorded as well as information regarding the size of the drink and time it was recorded.
 
 #### 4.2.3	Functional Requirements
 
@@ -121,17 +122,18 @@ of all the previous drinks they have recorded as well as information regarding t
 
 ### Schedule Drink Notifications
 
-Users will be able to schedule the frequency in which they are reminded by the application to drink water.
+Users will be able to schedule the frequency in which they are reminded by the system to drink water.
 
 #### 4.3.1	Description and Priority
 
-The application will allow for both manual, unassisted drink entry as well as remind the users that it is time for them to consume another drink of a certain size in order to meet their self-defined goal. 
+The system will allow for both manual, unassisted drink entry as well as remind the users that it is time for them to consume another drink of a certain size in order to meet their self-defined goal. 
 This goal is user defined and the user will specify how often (or how many times per 24 hour period) they would like to be reminded to drink. The priority of this feature is medium-high.
 
 #### 4.3.2	Stimulus/Response Sequences
 
-The user is presumed to be registered and logged in. The user will be either prompted to specify their schedule and goals on first login after registration, or will manually be able to edit from the main screen.
-The user will enter they goal number of ounces to drink per 24 hour period, and then specify how many times daily they'd like to receive a notification. The application will calculate as the day goes on how many ounces to remind the user to drink based on what the user has already logged. Based on the time, notifications will fire accordingly throughout the day containing the number calculated by the application.
+1. User will manually be able to edit from the main screen.
+2. User will enter they goal number of ounces to drink per 24 hour period, and then specify how many times daily they'd like to receive a notification.
+3. The system will calculate as the day goes on how many ounces to remind the user to drink based on what the user has already logged. Based on the time, notifications will fire accordingly throughout the day containing the number calculated by the system.
 
 #### 4.3.3	Functional Requirements
 
@@ -139,7 +141,7 @@ The user will enter they goal number of ounces to drink per 24 hour period, and 
 
 ### User Registration/Login/Log Out
 
-
+Users will register a unique account using their email address and a user-defined password, and log in and out of this account as they wish.
 
 #### 4.4.1	Description and Priority
 
@@ -147,8 +149,8 @@ Users will have a list of all their previously recorded drinks. This list will c
 
 #### 4.4.2	Stimulus/Response Sequences
 
-The user is presumed to be registered and logged in, and have logged at least one drink. The user will select an icon on the main screen which will lead them to their drink history. Here they will see a list 
-of all the previous drinks they have recorded as well as information regarding the size of the drink and time it was recorded.
+1. The user will select an icon on the main screen which will lead them to their drink history.
+2. User will see a list of all the previous drinks they have recorded as well as information regarding the size of the drink and time it was recorded.
 
 #### 4.4.3	Functional Requirements
 
