@@ -57,6 +57,23 @@ POST /api/v1/users/authenticate.json
 }
 ```
 
+### Check A User's Authentication Status
+
+##### Route
+
+```
+GET /api/v1/me.json?device_token={{device_token}}
+```
+
+##### Example Response
+
+```JSON
+{
+  "username":"example_user",
+  "device_token":"aa22f6d3-4d0b-4c8c-a089-1cfb4863aefe"
+}
+```
+
 ## Drinks
 
 ### Create A New Drink
