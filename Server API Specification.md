@@ -95,7 +95,7 @@ POST /api/v1/drinks.json
 ##### Route
 
 ```
-POST /api/v1/drinks.json?device_token={{device_token}}
+GET /api/v1/drinks.json?device_token={{device_token}}
 ```
 
 ##### Example Response
