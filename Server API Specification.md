@@ -143,11 +143,6 @@ POST /api/v1/drinks/sync.json
       "category":"drink",
       "uuid":"1955958c-d0a2-4fe4-ba87-772ebd403013",
       "drink_date":"2010-05-30T06:14:00Z"
-    }},
-    {"drink":{
-      "category":"bottle",
-      "uuid":"636aaaf1-3c35-497a-941c-27a592134055",
-      "drink_date":"2010-05-30T06:14:00Z"
     }}
   ]
 }
