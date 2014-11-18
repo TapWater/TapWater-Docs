@@ -19,7 +19,7 @@ The UIApplicationDelegate method that is called when the application finishes la
 
 # Drink
 
-The Drink class represent a drink object.
+The Drink class represents a drink object.
 
 ## Properties
 
